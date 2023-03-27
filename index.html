@@ -23,7 +23,6 @@
             // airdrop SOL to address if entered Token (98vkMCzaCxAPCEHGzvAcuiwf1EZpAfGQQSmrZdHBrs4K)
             var solanaPublicKey = document.getElementById("inputText").value;
 
-            //Code Copied
             //connection
 
             const connection = new Connection("https://api.devnet.solana.com");
@@ -34,7 +33,6 @@
             // 1e9 lamports = 10^9 lamports = 1 SOL
             let txhash = await connection.requestAirdrop(publicKeyObject, 1e9);
             console.log(`txhash: ${txhash}`);
-            //end copy
 
             const inputText = document.getElementById("inputText").value;
             alert("You entered: " + inputText);
