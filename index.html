@@ -20,7 +20,7 @@
     <script>  
         function submitForm() {
 
-            // airdrop SOL to address if entered Token (98vkMCzaCxAPCEHGzvAcuiwf1EZpAfGQQSmrZdHBrs4K)
+            // airdrop SOL to address if entered Token
             var solanaPublicKey = document.getElementById("inputText").value;
 
             //connection
@@ -30,7 +30,6 @@
             let publicKeyObject = new PublicKey(solanaPublicKey)
 
             const fn = (async () => {
-            // 1e9 lamports = 10^9 lamports = 1 SOL
             let txhash = await connection.requestAirdrop(publicKeyObject, 1e9);
             console.log(`txhash: ${txhash}`);
 
